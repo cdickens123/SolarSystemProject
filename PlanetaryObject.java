@@ -1,18 +1,20 @@
 public class PlanetaryObject{
+    //should this class be private because I OnLy wAnT It to be inherited from?
+    //can u inherit from a private class?
     //should this be an interface because I don't ever actually want it to be implemented?
 
-    private  String colour;
-    private int diameter;
-    private double distance;
-    private double angle;
+    protected  String colour;
+    protected int diameter;
+    protected double distance;
+    protected double angle;
 
-    PlanetaryObject(String colour,int diameter,double distance, double angle){
+  //  PlanetaryObject(String colour,int diameter,double distance, double angle){
         //constructor
-        this.colour = colour;
-        this.diameter = diameter;
-        this.distance = distance;
-        this.angle = angle;
-    }
+  //      this.colour = colour;
+  //      this.diameter = diameter;
+  //      this.distance = distance;
+   //     this.angle = angle;
+  //  }
 
     // I don't need a setter for the colour or diameter because it shouldn't change
     // need a setter for location
