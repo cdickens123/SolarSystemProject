@@ -8,13 +8,14 @@ public class PlanetaryObject{
     protected double distance;
     protected double angle;
 
-  //  PlanetaryObject(String colour,int diameter,double distance, double angle){
+    PlanetaryObject(String colour,int diameter,double distance, double angle,SolarSystem solarSystem){
         //constructor
-  //      this.colour = colour;
-  //      this.diameter = diameter;
-  //      this.distance = distance;
-   //     this.angle = angle;
-  //  }
+        this.colour = colour;
+        this.diameter = diameter;
+        this.distance = distance;
+        this.angle = angle;
+        solarSystem.drawSolarObject(distance,angle,diameter,colour);
+    }
 
     // I don't need a setter for the colour or diameter because it shouldn't change
     // need a setter for location
