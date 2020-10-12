@@ -11,5 +11,16 @@ public class MovingObject extends PlanetaryObject{
         this.angle = angle;
         this.velocity = velocity;
     }
+
+    private double getVelocity(){
+        //private because this is only needed within the class to aid movement
+        return this.velocity;
+    }
+
+    public void move(){
+        //unclear whether this is orbiting yet so left blank
+    }
+
+
     
 }
