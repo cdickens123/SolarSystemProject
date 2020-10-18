@@ -12,11 +12,9 @@ public class Moon extends PlanetaryObject implements Movable{
     public double getVelocity(){
         return this.velocity;
     }
-    //we need the angle and distance of the point about which this orbits
 
-    public void move(double distance,double angle){
-        this.distance = distance;
-        this.angle = angle * this.getVelocity();
+    public void move(){
+        this.angle = this.angle + (1* this.getVelocity());
         solarSystem.drawSolarObjectAbout(this.distance,this.angle,getDiameter(),getColour(),planetOfOrbit.getLocation()[0],planetOfOrbit.getLocation()[1]);
     }
     

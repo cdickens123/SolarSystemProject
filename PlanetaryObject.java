@@ -1,13 +1,15 @@
-public class PlanetaryObject{
-    //should this class be private because I OnLy wAnT It to be inherited from?
-    //can u inherit from a private class?
-    //should this be an interface because I don't ever actually want it to be implemented?
+public abstract class PlanetaryObject{
+    //super class, representing an object in the solar system
+    //an abstract class as is too generic to ever be implemented
 
     protected String colour;
     protected int diameter;
     protected double distance;
     protected double angle;
+    //properites of any object in the solar system.
+    //protected as only those subclasses need to access these balues
     public SolarSystem solarSystem;
+    //indicates which solar system a given object belongs
 
     PlanetaryObject(String colour,int diameter,double distance, double angle,SolarSystem solarSystem){
         //constructor
@@ -16,26 +18,27 @@ public class PlanetaryObject{
         this.distance = distance;
         this.angle = angle;
         this.solarSystem = solarSystem;
-       // solarSystem.drawSolarObject(distance,angle,diameter,colour);
     }
 
-    // I don't need a setter for the colour or diameter because it shouldn't change
-    // need a setter for location
-    //need a getter for location
 
     public double[] getLocation(){
         //returns the location of the object in the form of an array
+        //getter
         return new double[] {this.distance,this.angle};
     }
 
     public double getDiameter(){
+        //getter for diameter property
         return diameter;
     }
+
     public String getColour(){
+        //getter for colour property
         return colour;
     }
 
-    public void setLocation(double distance,double angle){
+    public void setLocation(double distance, double angle){
+        //moves an object to the given location
         this.distance = distance;
         this.angle = angle;
         solarSystem.drawSolarObject(distance,angle,getDiameter(),getColour());
