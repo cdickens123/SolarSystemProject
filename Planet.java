@@ -7,11 +7,13 @@ public class Planet extends PlanetaryObject implements Movable{
         this.velocity = velocity;
     }
 
-    private double getVelocity(){
+    public double getVelocity(){
         return this.velocity;
     }
 
-    public void move(){
-
+    public void move(double distance,double angle){
+        this.distance = distance;
+        this.angle = angle * this.getVelocity();
+        solarSystem.drawSolarObject(this.distance,this.angle,getDiameter(),getColour());
     }
 }

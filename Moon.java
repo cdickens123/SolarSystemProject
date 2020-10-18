@@ -7,7 +7,9 @@ public class Moon extends PlanetaryObject implements Movable{
     }
 
     public void move(
-        
+        this.distance = distance;
+        this.angle = angle * this.getVelocity();
+        solarSystem.drawSolarObject(this.distance,this.angle,getDiameter(),getColour());
     )
     
 }
