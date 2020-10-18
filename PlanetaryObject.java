@@ -3,10 +3,11 @@ public class PlanetaryObject{
     //can u inherit from a private class?
     //should this be an interface because I don't ever actually want it to be implemented?
 
-    protected  String colour;
+    protected String colour;
     protected int diameter;
     protected double distance;
     protected double angle;
+    public SolarSystem solarSystem;
 
     PlanetaryObject(String colour,int diameter,double distance, double angle,SolarSystem solarSystem){
         //constructor
@@ -14,7 +15,8 @@ public class PlanetaryObject{
         this.diameter = diameter;
         this.distance = distance;
         this.angle = angle;
-        solarSystem.drawSolarObject(distance,angle,diameter,colour);
+        this.solarSystem = solarSystem;
+       // solarSystem.drawSolarObject(distance,angle,diameter,colour);
     }
 
     // I don't need a setter for the colour or diameter because it shouldn't change
@@ -26,8 +28,16 @@ public class PlanetaryObject{
         return new double[] {this.distance,this.angle};
     }
 
-    public void setLocation(double[] location){
-        this.distance = location[0];
-        this.angle = location[1];
+    public double getDiameter(){
+        return diameter;
+    }
+    public String getColour(){
+        return colour;
+    }
+
+    public void setLocation(double distance,double angle){
+        this.distance = distance;
+        this.angle = angle;
+        solarSystem.drawSolarObject(distance,angle,getDiameter(),getColour());
     }
 }
