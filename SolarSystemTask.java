@@ -1,13 +1,20 @@
 import java.util.*; // import the ArrayList class
 
-public class SolarSystemTask{
-    //driver class
+/**
+ * This class is the main Driver class of the Solar System.
+ * It draws new objects and manages movement.
+ * @author Catherine Dickens
+ */
 
+public class SolarSystemTask{
+ 
     static ArrayList<Planet> planets = new ArrayList<Planet>(); //array to store all planets modelled
     static ArrayList<Moon> moons = new ArrayList<Moon>(); //array to store all moons modelled
     static ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>(); //array to store all asteroids modelled
 
-
+    /**
+     * Creates planets, moons and controls their movements.
+     */
     public static void main(String[] args){
 
         SolarSystem solarSystem  = new SolarSystem(1200,700);

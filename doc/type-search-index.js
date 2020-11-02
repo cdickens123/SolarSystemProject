@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"Asteroid"},{"p":"<Unnamed>","l":"Comet"},{"p":"<Unnamed>","l":"Moon"},{"p":"<Unnamed>","l":"Planet"},{"p":"<Unnamed>","l":"PlanetaryObject"},{"p":"<Unnamed>","l":"SolarSystem"},{"p":"<Unnamed>","l":"SolarSystemTask"},{"p":"<Unnamed>","l":"Sun"}]
