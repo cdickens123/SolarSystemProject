@@ -1,3 +1,3 @@
 # SolarSystemProject
 
-Compile all Java files in SolarSystemProject folder. Run SolarSystemTask class.
+Compile all Java files in SolarSystemProject folder. Run Driver class.
